@@ -8,4 +8,7 @@ create table stock_prices(
 
 alter table stock_prices add constraint stock_prices_uq unique(code, date);
 
--- exchange_rates: date, closing_price
+create table exchange_rates(
+  date date NOT NULL UNIQUE,
+  closing_price real NOT NULL
+);
